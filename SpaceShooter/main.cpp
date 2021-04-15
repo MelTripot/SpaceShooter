@@ -21,7 +21,7 @@ int main()
     shape.setTexture(text);
     //sf:Vector2f truc = Vector2f(100, 20);
     //shape.setPosition(truc);
-    int x = 20;
+    int x = 2   0;
     int y = 820;
     while (window.isOpen())
     {
