@@ -7,22 +7,24 @@ using namespace sf;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1600, 1000), "SpaceShooter");
-    sf::Sprite shape;
+    // ouvre une fenêtre avec les dimension 1600, 900 au nom de SpaceShooter 
+    sf::RenderWindow window(sf::VideoMode(1600, 900), "SpaceShooter");
+    // déclare le sprite et la texture du vaiseau 
+    sf::Sprite ship;
     sf::Texture text;
+    // déclare le sprite et la texture du vaiseau 
     sf::Texture laser;
     sf::Sprite proj;
     bool exist = false;
-    
+    //Charge la texture du vaiseau
     if (!text.loadFromFile("Asset/playerShip1_blue.png"))
     {
         // not found
     }
-    shape.setTexture(text);
-    //sf:Vector2f truc = Vector2f(100, 20);
-    //shape.setPosition(truc);
+    // Ajoute la texture du vaiseau sur son sprite 
+    ship.setTexture(text);
     int x = 800;
-    int y = 500;
+    int y = 450;
     while (window.isOpen())
     {
 
@@ -41,7 +43,7 @@ int main()
                 if (event.key.code == sf::Keyboard::E)
 
                 {
-                    Vector2f SpawnProjectile = Vector2f(x + 50, 820);
+                    Vector2f SpawnProjectile = Vector2f(x + 50, y);
                     if (!laser.loadFromFile("Asset/laserBlue01.png"))
                     {
                         // not found
@@ -59,7 +61,7 @@ int main()
                 proj.setPosition(x+50 ,y);
                 if (y < -30)
                 {
-                    y = 820;
+                    y = 450;
                     //proj.setPosition(x + 50, 820);
                     exist = false;
                 }
@@ -67,13 +69,13 @@ int main()
 
 
 
-            Vector2f truc = Vector2f(x, 900);
-            shape.setPosition(truc);
+            Vector2f truc = Vector2f(x, 450);
+            ship.setPosition(truc);
         }
         window.clear();
 
         window.draw(proj);
-        window.draw(shape);
+        window.draw(ship);
         window.display();
     }
 
