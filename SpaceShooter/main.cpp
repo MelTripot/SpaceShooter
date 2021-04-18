@@ -25,6 +25,8 @@ int main()
     ship.setTexture(text);
     int x = 800;
     int y = 450;
+    
+    int r = 0;
     while (window.isOpen())
     {
 
@@ -36,6 +38,10 @@ int main()
 
                 if (event.type == sf::Event::Closed)
                     window.close();
+                if (event.key.code == sf::Keyboard::Left)
+                    r -=10;
+                if(event.key.code == sf::Keyboard::Right)
+                    r +=10;
                 if (event.key.code == sf::Keyboard::D)
                     x += 10;
                 if (event.key.code == sf::Keyboard::Q)
@@ -70,7 +76,9 @@ int main()
 
 
             Vector2f truc = Vector2f(x, 450);
+            ship.setOrigin(50,40);
             ship.setPosition(truc);
+            ship.setRotation(r);
         }
         window.clear();
 
