@@ -41,11 +41,7 @@ int main()
                 if (event.key.code == sf::Keyboard::Left)
                     r -=10;
                 if(event.key.code == sf::Keyboard::Right)
-                    r +=10;
-                if (event.key.code == sf::Keyboard::D)
-                    x += 10;
-                if (event.key.code == sf::Keyboard::Q)
-                    x -= 10;
+                    r +=10;                
                 if (event.key.code == sf::Keyboard::E)
 
                 {
@@ -66,13 +62,12 @@ int main()
             if (exist)
             {
                 y -= 30;
-                proj.setPosition(x+50 ,y);
-                // si le projectil sort du cadre, le faire disparaitre 
+                proj.setPosition(x,y);
+                // si le projectil sort du cadre, le faire disparaitre et reassigner sa possition de départ  
                 if (y < -30 || y > 930 || x < -30 || x > 1630)
                 {
-                    
+                    x = 800;
                     y = 450;
-                    //proj.setPosition(x + 50, 820);
                     exist = false;
                 }
             }
