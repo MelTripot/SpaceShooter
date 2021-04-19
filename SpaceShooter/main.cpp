@@ -49,15 +49,17 @@ int main()
                 if (event.key.code == sf::Keyboard::E)
 
                 {
-                    Vector2f SpawnProjectile = Vector2f(x + 50, y);
+                    Vector2f SpawnProjectile = Vector2f(x , y );
                     if (!laser.loadFromFile("Asset/laserBlue01.png"))
                     {
                         // not found
                     }
                     proj.setTexture(laser);
                     proj.setPosition(SpawnProjectile);
-                    exist = true;
 
+                    proj.setRotation(r);
+                    
+                    exist = true;
 
                 }
             }
@@ -65,19 +67,19 @@ int main()
             {
                 y -= 30;
                 proj.setPosition(x+50 ,y);
-                if (y < -30)
+                // si le projectil sort du cadre, le faire disparaitre 
+                if (y < -30 || y > 930 || x < -30 || x > 1630)
                 {
+                    
                     y = 450;
                     //proj.setPosition(x + 50, 820);
                     exist = false;
                 }
             }
 
-
-
-            Vector2f truc = Vector2f(x, 450);
-            ship.setOrigin(50,40);
-            ship.setPosition(truc);
+//            Vector2f truc = Vector2f(x, 450);
+            ship.setOrigin(50,38);
+            ship.setPosition(800,450);
             ship.setRotation(r);
         }
         window.clear();

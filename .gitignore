@@ -1,0 +1,6 @@
+
+*.mk
+
+SpaceShooter/Debug/SpaceShooter.exe
+
+SpaceShooter/Debug/main.cpp.o
