@@ -1,9 +1,15 @@
+#define _USE_MATH_DEFINES
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
 #include <iostream>
+// nécessaire pour le calcul de la trajectoire du laser 
+#include <cmath>
 
 using namespace std;
 using namespace sf;
+
+
+
 
 int main()
 {
@@ -23,10 +29,13 @@ int main()
     }
     // Ajoute la texture du vaiseau sur son sprite 
     ship.setTexture(text);
-    int x = 800;
-    int y = 450;
+    float x = 800;
+    float y = 450;
+    float xa =0;
+    float ya =0;
     
     int r = 0;
+    float radient = 0;
     while (window.isOpen())
     {
 
@@ -45,6 +54,7 @@ int main()
                 if (event.key.code == sf::Keyboard::E)
 
                 {
+
                     Vector2f SpawnProjectile = Vector2f(x , y );
                     if (!laser.loadFromFile("Asset/laserBlue01.png"))
                     {
@@ -54,6 +64,12 @@ int main()
                     proj.setPosition(SpawnProjectile);
 
                     proj.setRotation(r);
+                    // ajout de la rotation de 270 du proj (car diff avec le sprite) 
+                    radient = ((r+270)*M_PI/180);
+                    xa = 10* cos(radient);
+                    ya = 10* sin(radient);
+                    
+                    
                     
                     exist = true;
 
@@ -61,9 +77,11 @@ int main()
             }
             if (exist)
             {
-                y -= 30;
-                proj.setPosition(x,y);
-                // si le projectil sort du cadre, le faire disparaitre et reassigner sa possition de départ  
+//                x += xa;
+//                y += ya;
+//                proj.setPosition(x,y);
+                proj.move(xa,ya);
+                // si le projectil sort du cadre, le faire disparaitre et reassigner sa position de départ  
                 if (y < -30 || y > 930 || x < -30 || x > 1630)
                 {
                     x = 800;
