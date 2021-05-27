@@ -11,18 +11,16 @@ using namespace std;
 using namespace sf;
 
 
-
-
 int main()
 {
     // ouvre une fenêtre avec les dimension 1600, 900 au nom de SpaceShooter 
-    sf::RenderWindow window(sf::VideoMode(1600, 900), "SpaceShooter");
+    RenderWindow window(sf::VideoMode(1600, 900), "SpaceShooter");
     // déclare le sprite et la texture du vaiseau 
-    sf::Sprite ship;
-    sf::Texture text;
+    Sprite ship;
+    Texture text;
     // déclare le sprite et la texture du vaiseau 
-    sf::Texture laser;
-    sf::Sprite proj;
+    Texture laser;
+    Sprite proj;
     bool exist = false;
     //Charge la texture du vaiseau
     if (!text.loadFromFile("Asset/playerShip1_blue.png"))
@@ -82,8 +80,8 @@ int main()
                     //TODO up le deplacement en dehors de la boucle 
                     radient = ((r+270)*M_PI/180);
 					// On peut changer la valeur (0.1) pour chager la vitesse
-					xa = 0.2* cos(radient);
-                    ya = 0.2* sin(radient);
+					xa = 1.5* cos(radient);
+                    ya = 1.5* sin(radient);
                     exist = true;
 
                 }
