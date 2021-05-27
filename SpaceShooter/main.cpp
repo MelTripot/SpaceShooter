@@ -38,13 +38,24 @@ int main()
     float xa =0;
     float ya =0;
     
-    int r = 0;
+    float r = 0;
     float radient = 0;
     while (window.isOpen())
     {
         ship.setOrigin(50,38);
         ship.setPosition(800,450);
         ship.setRotation(r);
+		
+		// Controles different inputs pour plusieurs bouttons en meme temps
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+		{
+			r -=0.3;
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
+		{
+			r +=0.3;
+		}
+		
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -53,10 +64,10 @@ int main()
 
                 if (event.type == sf::Event::Closed)
                     window.close();
-                if (event.key.code == sf::Keyboard::Left)
-                    r -=10;
-                if(event.key.code == sf::Keyboard::Right)
-                    r +=10;                
+                //if (event.key.code == sf::Keyboard::Left)
+                //    r -=10;
+                //if(event.key.code == sf::Keyboard::Right)
+                //    r +=10;                
                 if (event.key.code == sf::Keyboard::E)
                 {
                     Vector2f SpawnProjectile = Vector2f(x , y );
@@ -70,17 +81,18 @@ int main()
                     // ajout de la rotation de 270 du proj (car diff avec le sprite) 
                     //TODO up le deplacement en dehors de la boucle 
                     radient = ((r+270)*M_PI/180);
-                    // xa = 10* cos(radient);
-                    // ya = 10* sin(radient);
 					// On peut changer la valeur (0.1) pour chager la vitesse
-					xa = 0.1* cos(radient);
-                    ya = 0.1* sin(radient);
+					xa = 0.2* cos(radient);
+                    ya = 0.2* sin(radient);
                     exist = true;
 
                 }
             }
                       
         }
+		
+		
+		
 		
 		if (exist)
 		{
