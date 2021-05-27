@@ -70,27 +70,33 @@ int main()
                     // ajout de la rotation de 270 du proj (car diff avec le sprite) 
                     //TODO up le deplacement en dehors de la boucle 
                     radient = ((r+270)*M_PI/180);
-                    xa = 10* cos(radient);
-                    ya = 10* sin(radient);
+                    // xa = 10* cos(radient);
+                    // ya = 10* sin(radient);
+					// On peut changer la valeur (0.1) pour chager la vitesse
+					xa = 0.1* cos(radient);
+                    ya = 0.1* sin(radient);
                     exist = true;
 
                 }
             }
-            if (exist)
-            {
+                      
+        }
+		
+		if (exist)
+		{
 //                x += xa;
 //                y += ya;
 //                proj.setPosition(x,y);
-                proj.move(xa,ya);
-                // si le projectil sort du cadre, le faire disparaitre et reassigner sa position de départ  
-                if (y < -30 || y > 930 || x < -30 || x > 1630)
-                {
-                    x = 800;
-                    y = 450;
-                    exist = false;
-                }
-            }            
-        }
+			proj.move(xa,ya);
+			// si le projectil sort du cadre, le faire disparaitre et reassigner sa position de départ  
+			if (y < -30 || y > 930 || x < -30 || x > 1630)
+			{
+				x = 800;
+				y = 450;
+				exist = false;
+			}
+		}  
+		
         window.clear();
         window.draw(proj);
         window.draw(ship);
