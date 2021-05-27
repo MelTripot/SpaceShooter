@@ -71,7 +71,7 @@ Debug/main.cpp.o: main.cpp C:\SFML-2.5.1\include/SFML/Graphics.hpp \
  C:\SFML-2.5.1\include/SFML/Graphics/Glsl.inl \
  C:\SFML-2.5.1\include/SFML/Graphics/Sprite.hpp \
  C:\SFML-2.5.1\include/SFML/Graphics/Text.hpp \
- C:\SFML-2.5.1\include/SFML/Graphics/VertexBuffer.hpp
+ C:\SFML-2.5.1\include/SFML/Graphics/VertexBuffer.hpp Ship.cpp
 
 C:\SFML-2.5.1\include/SFML/Graphics.hpp:
 
@@ -220,3 +220,5 @@ C:\SFML-2.5.1\include/SFML/Graphics/Sprite.hpp:
 C:\SFML-2.5.1\include/SFML/Graphics/Text.hpp:
 
 C:\SFML-2.5.1\include/SFML/Graphics/VertexBuffer.hpp:
+
+Ship.cpp:

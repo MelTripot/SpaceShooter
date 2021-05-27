@@ -4,6 +4,8 @@
 #include <iostream>
 // nécessaire pour le calcul de la trajectoire du laser 
 #include <cmath>
+#include <Ship.cpp>
+
 
 using namespace std;
 using namespace sf;
@@ -29,6 +31,8 @@ int main()
     }
     // Ajoute la texture du vaiseau sur son sprite 
     ship.setTexture(text);
+    
+    
     float x = 800;
     float y = 450;
     float xa =0;
@@ -38,7 +42,9 @@ int main()
     float radient = 0;
     while (window.isOpen())
     {
-
+        ship.setOrigin(50,38);
+        ship.setPosition(800,450);
+        ship.setRotation(r);
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -52,9 +58,7 @@ int main()
                 if(event.key.code == sf::Keyboard::Right)
                     r +=10;                
                 if (event.key.code == sf::Keyboard::E)
-
                 {
-
                     Vector2f SpawnProjectile = Vector2f(x , y );
                     if (!laser.loadFromFile("Asset/laserBlue01.png"))
                     {
@@ -62,15 +66,12 @@ int main()
                     }
                     proj.setTexture(laser);
                     proj.setPosition(SpawnProjectile);
-
                     proj.setRotation(r);
                     // ajout de la rotation de 270 du proj (car diff avec le sprite) 
+                    //TODO up le deplacement en dehors de la boucle 
                     radient = ((r+270)*M_PI/180);
                     xa = 10* cos(radient);
                     ya = 10* sin(radient);
-                    
-                    
-                    
                     exist = true;
 
                 }
@@ -88,15 +89,9 @@ int main()
                     y = 450;
                     exist = false;
                 }
-            }
-
-//            Vector2f truc = Vector2f(x, 450);
-            ship.setOrigin(50,38);
-            ship.setPosition(800,450);
-            ship.setRotation(r);
+            }            
         }
         window.clear();
-
         window.draw(proj);
         window.draw(ship);
         window.display();
