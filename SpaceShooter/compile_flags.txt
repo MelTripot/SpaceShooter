@@ -1,0 +1,11 @@
+-IE:\Logiciels\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++
+-IE:\Logiciels\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\x86_64-w64-mingw32
+-IE:\Logiciels\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\backward
+-IE:\Logiciels\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include
+-IE:\Logiciels\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include-fixed
+-IE:\Logiciels\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\x86_64-w64-mingw32\include
+-IE:\Cours\CoursB3\CPP\SpaceShooterGit\SpaceShooter\SpaceShooter
+-IE:\Logiciels\SFML_CPP\SFML\include
+-std=c++17
+-target
+x86_64-pc-windows-gnu

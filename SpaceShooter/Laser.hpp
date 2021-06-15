@@ -7,10 +7,13 @@ using namespace sf;
 class Laser {      
 private: 
     float angle ; 
-    float x;
+	float x;
     float y;
-    Sprite shape;
-    Texture text;
+    float xa;
+    float ya;
+	int alive;
+    Sprite laserShape;
+    Texture laserTexture;
     
 public:
     // Laser(); // empty constructor
