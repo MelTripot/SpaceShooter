@@ -6,3 +6,10 @@ SpaceShooter/Debug/SpaceShooter.exe
 SpaceShooter/Debug/main.cpp.o
 
 SpaceShooter/Release/
+*.dll
+
+SpaceShooter/Debug/
+
+SpaceShooter/SpaceShooter.txt
+SpaceShooter/SpaceShooter.project
+SpaceShooter/SpaceShooter.mk
