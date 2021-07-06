@@ -11,11 +11,11 @@ private:
     float y;
     float xa;
     float ya;
-    Texture laserTexture;
     
 public:
 	int alive;
 	Sprite laserShape;
+	static Texture laserTexture;
     // Laser(); // empty constructor
     Laser(float angle); // constructor
 	Laser(const Laser&); //par copie

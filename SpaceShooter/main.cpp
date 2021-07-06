@@ -17,12 +17,15 @@ int main()
 {
     // ouvre une fenêtre avec les dimension 1600, 900 au nom de SpaceShooter 
     RenderWindow window(sf::VideoMode(1600, 900), "SpaceShooter");
+	window.setKeyRepeatEnabled(false);
     // déclare le sprite et la texture du vaiseau 
     Sprite ship;
     Texture text;
     // déclare le sprite et la texture du laser 
     // Texture laser;
     // Sprite proj;
+	
+	Laser::laserTexture.loadFromFile("Asset/laserBlue01.png");
 	
 	EntityManager entityManager;
 	

@@ -4,6 +4,7 @@
 #include <cmath>
 
 using namespace std;
+Texture Laser::laserTexture;
 
 // Laser::Laser(){}
 
@@ -13,14 +14,14 @@ Laser::Laser(float _angle): angle(_angle), x(800) , y(450)
 	// this->x = 800;
     // this->y = 450;
 	Vector2f SpawnProjectile = Vector2f(x , y );
-	this->laserTexture.loadFromFile("Asset/laserBlue01.png");
+	// this->laserTexture.loadFromFile("Asset/laserBlue01.png");
 	this->laserShape.setTexture(this->laserTexture);
 	this->laserShape.setPosition(SpawnProjectile);
 	this->laserShape.setRotation(_angle);
 					
 	float radient = ((_angle+270)*3.141592654/180);
-	xa = 1* cos(radient);
-	ya = 1* sin(radient);
+	xa = 0.3* cos(radient);
+	ya = 0.3* sin(radient);
 	
 	this->alive = 1;
 	
@@ -46,7 +47,7 @@ void Laser::LaserUpdate()
 
 }
 
-Laser::Laser(const Laser& source) : x(800), y(450), xa(source.xa), ya(source.ya), alive(1), laserShape(source.laserShape), laserTexture(source.laserTexture)
+Laser::Laser(const Laser& source) : x(800), y(450), xa(source.xa), ya(source.ya), alive(1), laserShape(source.laserShape)
 {
 	
 }
