@@ -1,4 +1,4 @@
-Debug/EntityManager.cpp.o: EntityManager.cpp Laser.hpp \
+Debug/EntityManager.cpp.o: EntityManager.cpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics.hpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Window.hpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/System.hpp \
@@ -72,9 +72,8 @@ Debug/EntityManager.cpp.o: EntityManager.cpp Laser.hpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Glsl.inl \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Sprite.hpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Text.hpp \
- E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/VertexBuffer.hpp
-
-Laser.hpp:
+ E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/VertexBuffer.hpp \
+ EntityManager.hpp Laser.hpp
 
 E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics.hpp:
 
@@ -223,3 +222,7 @@ E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Sprite.hpp:
 E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Text.hpp:
 
 E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/VertexBuffer.hpp:
+
+EntityManager.hpp:
+
+Laser.hpp:

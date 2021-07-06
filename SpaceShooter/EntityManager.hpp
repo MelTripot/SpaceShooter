@@ -2,14 +2,17 @@
 #include <iostream>
 #include <vector>
 
+#include "Laser.hpp"
+
 using namespace std;
 using namespace sf;
 
 class EntityManager {      
 private: 
     vector<Laser> laserTab;
-	float LaserAngle;
+	// float LaserAngle; 
 public:
-    createLaser(float LaserAngle);
-    checkLaser();
+    void createLaser(float LaserAngle);
+    void checkLaser();
+	EntityManager();
 };

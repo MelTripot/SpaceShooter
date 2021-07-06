@@ -73,7 +73,7 @@ Debug/main.cpp.o: main.cpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Sprite.hpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Text.hpp \
  E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/VertexBuffer.hpp \
- Ship.cpp
+ Ship.hpp EntityManager.hpp Laser.hpp
 
 E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics.hpp:
 
@@ -223,4 +223,8 @@ E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/Text.hpp:
 
 E:\Logiciels\SFML_CPP\SFML\include/SFML/Graphics/VertexBuffer.hpp:
 
-Ship.cpp:
+Ship.hpp:
+
+EntityManager.hpp:
+
+Laser.hpp:

@@ -4,7 +4,9 @@
 #include <iostream>
 // nécessaire pour le calcul de la trajectoire du laser 
 #include <cmath>
-#include <Ship.cpp>
+
+#include "Ship.hpp"
+#include "EntityManager.hpp"
 
 
 using namespace std;
@@ -21,6 +23,9 @@ int main()
     // déclare le sprite et la texture du vaiseau 
     Texture laser;
     Sprite proj;
+	
+	EntityManager entityManager;
+	
     bool exist = false;
     //Charge la texture du vaiseau
     if (!text.loadFromFile("Asset/playerShip1_blue.png"))
@@ -30,6 +35,8 @@ int main()
     // Ajoute la texture du vaiseau sur son sprite 
     ship.setTexture(text);
     
+	ship.setOrigin(50,38);
+	ship.setPosition(800,450);
     
     float x = 800;
     float y = 450;
@@ -40,9 +47,8 @@ int main()
     float radient = 0;
     while (window.isOpen())
     {
-        ship.setOrigin(50,38);
-        ship.setPosition(800,450);
         ship.setRotation(r);
+		entityManager.checkLaser();
 		
 		// Controles different inputs pour plusieurs bouttons en meme temps
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
@@ -69,7 +75,7 @@ int main()
                 if (event.key.code == sf::Keyboard::E)
                 {
                     
-					EntityManager.createLaser(r);
+					entityManager.createLaser(r);
 					
 					
 					/*

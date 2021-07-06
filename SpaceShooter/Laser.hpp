@@ -18,6 +18,7 @@ private:
 public:
     // Laser(); // empty constructor
     Laser(float angle); // constructor
+	Laser(const Laser&); //par copie
     ~Laser(); // Destructor
     void LaserUpdate();
     
