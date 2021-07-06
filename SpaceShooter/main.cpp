@@ -20,9 +20,9 @@ int main()
     // déclare le sprite et la texture du vaiseau 
     Sprite ship;
     Texture text;
-    // déclare le sprite et la texture du vaiseau 
-    Texture laser;
-    Sprite proj;
+    // déclare le sprite et la texture du laser 
+    // Texture laser;
+    // Sprite proj;
 	
 	EntityManager entityManager;
 	
@@ -49,6 +49,7 @@ int main()
     {
         ship.setRotation(r);
 		entityManager.checkLaser();
+		
 		
 		// Controles different inputs pour plusieurs bouttons en meme temps
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
@@ -103,7 +104,7 @@ int main()
 		
 		
 		
-		
+		/*
 		if (exist)
 		{
 //                x += xa;
@@ -118,10 +119,12 @@ int main()
 				exist = false;
 			}
 		}  
+		*/
 		
         window.clear();
-        window.draw(proj);
+        // window.draw(proj);
         window.draw(ship);
+		entityManager.laserDraw(window);
         window.display();
     }
 

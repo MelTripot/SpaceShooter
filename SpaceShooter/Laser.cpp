@@ -22,7 +22,7 @@ Laser::Laser(float _angle): angle(_angle), x(800) , y(450)
 	xa = 1.5* cos(radient);
 	ya = 1.5* sin(radient);
 	
-	// this->alive = 1;
+	this->alive = 1;
 	
 }
 
@@ -42,9 +42,11 @@ void Laser::LaserUpdate()
 		this->alive = 0;
 		
 	}
+	
 
 }
 
-Laser::Laser(const Laser& source){
+Laser::Laser(const Laser& source) : x(800), y(450), xa(source.xa), ya(source.ya), alive(1), laserShape(source.laserShape), laserTexture(source.laserTexture)
+{
 	
 }

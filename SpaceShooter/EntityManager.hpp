@@ -10,9 +10,11 @@ using namespace sf;
 class EntityManager {      
 private: 
     vector<Laser> laserTab;
-	// float LaserAngle; 
+	// float LaserAngle;
+	
 public:
     void createLaser(float LaserAngle);
     void checkLaser();
+	void laserDraw(RenderWindow &window);
 	EntityManager();
 };
