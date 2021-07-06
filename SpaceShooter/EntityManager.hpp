@@ -8,7 +8,8 @@ using namespace sf;
 class EntityManager {      
 private: 
     vector<Laser> laserTab;
+	float LaserAngle;
 public:
-    createLaser();
+    createLaser(float LaserAngle);
     checkLaser();
 };

@@ -7,11 +7,11 @@ using namespace std;
 
 // Laser::Laser(){}
 
-Laser::Laser(const float _angle): angle(_angle) 
+Laser::Laser(const float _angle): angle(_angle), x(800) , y(450)
 {
 	
-	this->x = 800;
-    this->y = 450;
+	// this->x = 800;
+    // this->y = 450;
 	Vector2f SpawnProjectile = Vector2f(x , y );
 	this->laserTexture.loadFromFile("Asset/laserBlue01.png");
 	this->laserShape.setTexture(this->laserShape);

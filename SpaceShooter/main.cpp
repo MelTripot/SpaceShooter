@@ -68,7 +68,12 @@ int main()
                 //    r +=10;                
                 if (event.key.code == sf::Keyboard::E)
                 {
-                    Vector2f SpawnProjectile = Vector2f(x , y );
+                    
+					EntityManager.createLaser(r);
+					
+					
+					/*
+					Vector2f SpawnProjectile = Vector2f(x , y );
                     if (!laser.loadFromFile("Asset/laserBlue01.png"))
                     {
                         // not found
@@ -83,7 +88,8 @@ int main()
 					xa = 1.5* cos(radient);
                     ya = 1.5* sin(radient);
                     exist = true;
-
+					*/
+					
                 }
             }
                       
