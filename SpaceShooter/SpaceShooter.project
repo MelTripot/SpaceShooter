@@ -3,6 +3,8 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="Meteor.hpp"/>
+    <File Name="Meteor.cpp"/>
     <File Name="EntityManager.hpp"/>
     <File Name="EntityManager.cpp"/>
     <File Name="Laser.hpp"/>

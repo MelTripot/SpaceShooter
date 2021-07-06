@@ -19,8 +19,8 @@ Laser::Laser(float _angle): angle(_angle), x(800) , y(450)
 	this->laserShape.setRotation(_angle);
 					
 	float radient = ((_angle+270)*3.141592654/180);
-	xa = 1.5* cos(radient);
-	ya = 1.5* sin(radient);
+	xa = 1* cos(radient);
+	ya = 1* sin(radient);
 	
 	this->alive = 1;
 	
